@@ -6,11 +6,11 @@ function App() {
   const [reply, setReply] = useState("");
 
   // GET request
-  useEffect(() => {
-    fetch("http://localhost:5000/api/hello")
-      .then(res => res.json())
-      .then(data => setMsg(data.message));
-  }, []);
+useEffect(() => {
+  fetch("http://a72e3e08f48164773bbbbb17ffb2c7b2-2116167387.ap-south-1.elb.amazonaws.com/api/hello")
+    .then(res => res.json())
+    .then(data => setMsg(data.message));
+}, []);
 
   // POST request
   const sendData = async () => {
